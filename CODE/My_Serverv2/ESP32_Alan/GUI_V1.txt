@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terminal con Display de 7 Segmentos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      background-color: #f4f4f4;
+    }
+
+    /* Estilo para el título */
+    .titulo {
+      font-size: 36px;
+      font-weight: bold;
+      text-align: center;
+      color: #4CAF50;
+      margin-top: 20px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+      padding: 10px;
+      width: 100%;
+      background-color: #333;
+      color: white;
+    }
+
+    /* Contenedor para los carros y el display alineados horizontalmente */
+    .main-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      margin-top: 30px;
+      flex-grow: 1;
+    }
+
+    /* Estilo para los carros (rectángulos) en disposición vertical */
+    .carros-container {
+      display: grid;
+      grid-template-columns: repeat(4, 120px); /* 4 columnas */
+      grid-template-rows: repeat(2, 180px); /* 2 filas */
+      gap: 15px;
+    }
+
+    .carro {
+      width: 120px;
+      height: 180px; /* Altura mayor que el ancho */
+      background-color: #4CAF50; /* Color verde por defecto */
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 36px;
+      font-weight: bold;
+      color: white;
+    }
+
+    /* Estilo especial para el primer carrito */
+    .carro-rojo {
+      background-color: red; /* Primer carrito en color rojo */
+    }
+
+    /* Estilo para el Display de 7 segmentos con 5 filas y 3 columnas */
+    .display {
+      width: 150px;
+      height: 250px;
+      display: grid;
+      grid-template-rows: repeat(5, 1fr); /* 5 filas */
+      grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+      gap: 5px;
+      background-color: black;
+      border-radius: 10px;
+      padding: 10px;
+      color: red;
+    }
+
+    .segment {
+      width: 40px;
+      height: 40px;
+      background-color: gray;
+      border-radius: 5px;
+      margin: 2px;
+    }
+
+    .segment-on {
+      background-color: red;
+    }
+
+    /* Estilo para el botón en la parte inferior derecha */
+    .button-container {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  
+  <div class="titulo">
+    TERMINAL DE PARQUEO
+  </div>
+
+  <!-- Contenedor principal de los carros y el display -->
+  <div class="main-container">
+    <!-- Contenedor de los 8 rectángulos (carros) -->
+    <div class="carros-container">
+      <div class="carro carro-rojo">1</div> <!-- Primer carro en rojo -->
+      <div class="carro">2</div>
+      <div class="carro">3</div>
+      <div class="carro">4</div>
+      <div class="carro">5</div>
+      <div class="carro">6</div>
+      <div class="carro">7</div>
+      <div class="carro">8</div>
+    </div>
+
+    <!-- Display de 7 segmentos con 5 filas y 3 columnas -->
+    <div class="display">
+      <!-- Filas del Display -->
+      <div class="segment segment-on">1</div>
+      <div class="segment segment-on">2</div>
+      <div class="segment segment-on">3</div>
+
+      <div class="segment segment-on">4</div>
+      <div class="segment segment-on">5</div>
+      <div class="segment segment-on">6</div>
+
+      <div class="segment segment-on">7</div>
+      <div class="segment segment-on">8</div>
+      <div class="segment segment-on">9</div>
+
+      <div class="segment segment-on">10</div>
+      <div class="segment segment-on">11</div>
+      <div class="segment segment-on">12</div>
+
+      <div class="segment segment-on">13</div>
+      <div class="segment segment-on">14</div>
+      <div class="segment segment-on">15</div>
+    </div>
+  </div>
+
+  <!-- Botón en la parte inferior derecha -->
+  <div class="button-container">
+    <button>Botón</button>
+  </div>
+
+</body>
+</html>
