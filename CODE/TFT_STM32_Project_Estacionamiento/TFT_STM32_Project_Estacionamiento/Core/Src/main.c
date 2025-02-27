@@ -468,7 +468,7 @@ switch (S) {
 			break;
 
 
-		case 5:
+		case 8:
 			 C5 = !C5;
 
 			 if(C5 == 1){
@@ -488,7 +488,7 @@ switch (S) {
 				 State_Dis(Number_Display);// imprimir en display
 			 }
 			 break;
-		case 6:
+		case 7:
 			 C6 = !C6;
 
 			 if(C6 == 1){
@@ -508,7 +508,7 @@ switch (S) {
 				 State_Dis(Number_Display);// imprimir en display
 			 }
 			 break;
-		case 7:
+		case 6:
 			 C7 = !C7;
 
 			 if(C7 == 1){
@@ -528,7 +528,7 @@ switch (S) {
 				 State_Dis(Number_Display);// imprimir en display
 			 }
 			 break;
-		case 8:
+		case 5:
 			 C8 = !C8;
 
 			 if(C8 == 1){

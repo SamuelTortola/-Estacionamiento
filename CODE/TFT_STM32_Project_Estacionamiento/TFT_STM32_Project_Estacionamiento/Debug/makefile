@@ -60,8 +60,8 @@ all: main-build
 main-build: TFT_STM32_Project_Estacionamiento.elf secondary-outputs
 
 # Tool invocations
-TFT_STM32_Project_Estacionamiento.elf TFT_STM32_Project_Estacionamiento.map: $(OBJS) $(USER_OBJS) D:\samue\Descargas\TFT_STM32_Project_Estacionamiento\TFT_STM32_Project_Estacionamiento\STM32F446RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "TFT_STM32_Project_Estacionamiento.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\samue\Descargas\TFT_STM32_Project_Estacionamiento\TFT_STM32_Project_Estacionamiento\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TFT_STM32_Project_Estacionamiento.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+TFT_STM32_Project_Estacionamiento.elf TFT_STM32_Project_Estacionamiento.map: $(OBJS) $(USER_OBJS) D:\OneDrive\Escritorio\TFT_STM32_Project_Estacionamiento\TFT_STM32_Project_Estacionamiento\STM32F446RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "TFT_STM32_Project_Estacionamiento.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\OneDrive\Escritorio\TFT_STM32_Project_Estacionamiento\TFT_STM32_Project_Estacionamiento\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TFT_STM32_Project_Estacionamiento.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
